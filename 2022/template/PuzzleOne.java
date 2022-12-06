@@ -1,10 +1,14 @@
 import java.util.*;
 import java.io.*;
 
-class Puzzle {
+class PuzzleOne {
     public static void main(String[] args) {
+        String inputFileName = "input.txt";
+        if (args.length > 0) {
+            inputFileName = args[0];
+        }
         try {
-            File inputFile = new File("input.txt");
+            File inputFile = new File(inputFileName);
             Scanner inputReader = new Scanner(inputFile);
 
             while(inputReader.hasNextLine()) {
